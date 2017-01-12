@@ -104,6 +104,8 @@ open class NohanaImagePickerController: UIViewController {
         guard let navigationController = storyboard.instantiateViewController(withIdentifier: viewControllerId) as? UINavigationController else {
             fatalError("navigationController init failed.")
         }
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.barTintColor = UIColor(red: 35.0 / 255, green: 145.0 / 255, blue: 1, alpha: 1)
         addChildViewController(navigationController)
         view.addSubview(navigationController.view)
         navigationController.didMove(toParentViewController: self)
